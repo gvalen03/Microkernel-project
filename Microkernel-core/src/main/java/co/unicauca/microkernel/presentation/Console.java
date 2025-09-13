@@ -24,7 +24,7 @@ public class Console {
 
         int option;
 
-        System.out.println("Aplicación de reportes");
+        System.out.println("Aplicacion de reportes");
 
         do {
 
@@ -50,18 +50,6 @@ public class Console {
         //Mostrar proyecto para el cual se hara el reporte.
         List<Project> projects = projectService.getAll();
 
-        /*System.out.println("Seleccione un proyecto: ");
-
-        for (int index = 0; index < projects.size(); index++) {
-
-            Project project = projects.get(index);
-            System.out.println(index + ". " + project.getNombreProyecto());
-        }
-
-        int projectIndex = scanner.nextInt();
-        Project selectedProject = projects.get(projectIndex);
-*/
-        //Leer salto de línea para que pueda pregunta por el código del país. (https://stackoverflow.com/a/13102066/1601530)
         scanner.nextLine();
 
         System.out.println("Formato del reporte (html | json): ");
@@ -76,12 +64,7 @@ public class Console {
             System.out.println(report);
 
         } catch (Exception exception) {
-            System.out.println("No fue posible calcular el costo del envío. " + exception.getMessage());
+            System.out.println("No fue posible realizar el reporte: " + exception.getMessage());
         }
-
-
-
     }
-
-
 }
